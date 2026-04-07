@@ -1,0 +1,69 @@
+.top-message {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 300px;
+  max-width: 90%;
+  z-index: 9999;
+  border-radius: 12px;
+  padding: 14px 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+  animation: slideDown 0.35s ease;
+  backdrop-filter: blur(10px);
+}
+
+.message-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.message-text {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Types */
+.top-message.success {
+  background: rgba(34, 197, 94, 0.95);
+  color: #fff;
+}
+
+.top-message.error {
+  background: rgba(239, 68, 68, 0.95);
+  color: #fff;
+}
+
+.top-message.warning {
+  background: rgba(245, 158, 11, 0.95);
+  color: #fff;
+}
+
+/* Close button */
+.close-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  margin-left: 16px;
+  transition: transform 0.2s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -25px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}

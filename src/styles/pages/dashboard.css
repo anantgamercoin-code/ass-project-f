@@ -1,0 +1,25 @@
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-lg);
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: var(--card-bg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  animation: fadeIn 0.2s ease;
+}
+
+.dropdown div {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dropdown div:hover {
+  background: rgba(99, 102, 241, 0.1);
+}

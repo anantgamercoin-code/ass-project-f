@@ -1,0 +1,111 @@
+/* BASE CARD */
+.card {
+  position: relative;
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid var(--color-border);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+
+  transition: all 0.25s ease;
+  z-index: 1;
+  overflow: hidden;
+}
+
+/* 🔥 BACK LAYER (cool effect) */
+.card__bg {
+  position: absolute;
+  bottom: -8px;
+  left: 8px;
+  right: 8px;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  z-index: -1;
+  opacity: 0.25;
+  transition: all 0.25s ease;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card:hover .card__bg {
+  bottom: -12px;
+}
+
+/* 🎯 VARIANTS (colors) */
+.card--primary .card__bg {
+  background: #6366f1;
+}
+
+.card--success .card__bg {
+  background: #22c55e;
+}
+
+.card--warning .card__bg {
+  background: #f59e0b;
+}
+
+.card--danger .card__bg {
+  background: #ef4444;
+}
+
+/* 🔥 TOP ACCENT LINE */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  border-top-left-radius: var(--radius-lg);
+  border-top-right-radius: var(--radius-lg);
+}
+
+/* Match accent with variant */
+.card--primary::before {
+  background: #6366f1;
+}
+.card--success::before {
+  background: #22c55e;
+}
+.card--warning::before {
+  background: #f59e0b;
+}
+.card--danger::before {
+  background: #ef4444;
+}
+
+/* TEXT */
+.card__title {
+  font-size: 14px;
+  color: var(--color-muted);
+}
+
+.card__value {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+/* 🔥 subtle color tint on value */
+.card--primary .card__value {
+  color: #4f46e5;
+}
+.card--success .card__value {
+  color: #16a34a;
+}
+.card--warning .card__value {
+  color: #d97706;
+}
+.card--danger .card__value {
+  color: #dc2626;
+}
+
+.card__subtitle {
+  font-size: 13px;
+  color: var(--color-muted);
+}

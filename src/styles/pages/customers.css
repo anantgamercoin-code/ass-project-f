@@ -1,0 +1,286 @@
+.customers-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Header */
+.customers-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.customers-header h1 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.customers-header input {
+  width: 260px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Table */
+.customers-table {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.customers-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.customers-table th {
+  text-align: left;
+  font-size: 13px;
+  color: #6b7280;
+  padding: 12px;
+}
+
+.customers-table td {
+  padding: 12px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 14px;
+}
+
+.customers-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* Badge */
+.top-badge {
+  background: #ffeaa7;
+  color: #b45309;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  margin-left: 8px;
+}
+
+/* History Header */
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.history-header h3 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-count {
+  font-size: 13px;
+  color: #6b7280;
+  background: #eef2ff;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* History List */
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Order Row */
+.order-row {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background: #fff;
+  transition: 0.2s;
+  display: block;
+}
+
+.order-row:hover {
+  border-color: #6366f1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.order-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+  gap: 16px; /* 👈 adds breathing space */
+}
+
+.order-id {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.order-time {
+  font-size: 12px;
+  color: #6b7280;
+  margin-left: auto; /* 👈 pushes it fully right */
+  white-space: nowrap;
+}
+
+.order-details {
+  padding: 12px 14px;
+  border-top: 1px solid #f1f5f9;
+  background: #f9fafb;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.order-details p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+.order-details strong {
+  color: #374151;
+  margin-right: 4px;
+}
+
+/* Drawer Overlay */
+.customer-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: flex-end;
+  z-index: 999;
+}
+
+/* Drawer */
+.customer-drawer {
+  width: 420px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.drawer-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.drawer-header button {
+  background: #f3f4f6;
+  border: none;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.drawer-header button:hover {
+  background: #e5e7eb;
+}
+
+.drawer-content {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.drawer-content p {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #374151;
+}
+
+.customer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.customer-info div {
+  background: #f9fafb;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.customer-info span {
+  display: block;
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.customer-info strong {
+  font-size: 14px;
+  color: #111827;
+}
+
+.order-history {
+  margin-top: 20px;
+}
+
+.order-note-input {
+  width: 100%;
+  min-height: 70px;
+  resize: vertical;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  font-size: 13px;
+  outline: none;
+}
+
+.order-note-input:focus {
+  border-color: #6366f1;
+}
+
+/* Status styles */
+.status {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status.pending {
+  color: #b45309;
+}
+
+.status.completed {
+  color: #059669;
+}
+
+.status.cancelled {
+  color: #dc2626;
+}
