@@ -1,0 +1,11 @@
+/* Import all CSS files in correct order */
+@import './base/variables.css';
+@import './base/global.css';
+@import './components/card.css';
+@import './components/table.css';
+@import './layout/layout.css';
+@import './pages/dashboard.css';
+@import './pages/orders.css';
+@import './pages/customers.css';
+@import './pages/products.css';
+@import './pages/reports.css';
