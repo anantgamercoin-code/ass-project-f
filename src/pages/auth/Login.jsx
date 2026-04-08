@@ -126,7 +126,7 @@ export default function Login() {
       <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.65 }}>
         <Card
           sx={{
-            maxWidth: 520,
+            maxWidth: 420,
             width: '100%',
             borderRadius: 4,
             border: '1px solid rgba(255, 255, 255, 0.12)',
@@ -161,32 +161,9 @@ export default function Login() {
                     RestaurantHub
                   </Typography>
                   <Typography color="text.secondary" sx={{ fontSize: '0.96rem' }}>
-                    The modern SaaS dashboard for restaurant operations, built for speed and clarity.
+                    Clean, fast restaurant admin login.
                   </Typography>
                 </Box>
-              </motion.div>
-
-              <motion.div variants={itemVariants}>
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={1.5} justifyContent="center" sx={{ mb: 3 }}>
-                  {['Secure access', 'API driven', 'Fast deployment'].map((label) => (
-                    <Box
-                      key={label}
-                      sx={{
-                        px: 2.5,
-                        py: 1,
-                        borderRadius: 2,
-                        background: 'rgba(102, 126, 234, 0.08)',
-                        color: '#1e2d6c',
-                        fontSize: '0.82rem',
-                        fontWeight: 700,
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.08em'
-                      }}
-                    >
-                      {label}
-                    </Box>
-                  ))}
-                </Stack>
               </motion.div>
 
               <motion.form onSubmit={handleSubmit} variants={containerVariants} initial="hidden" animate="visible">

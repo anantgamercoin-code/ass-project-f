@@ -24,12 +24,12 @@ This project is built with **React 19**, **Vite**, and **Material UI**. It inclu
   - `AppDataContext.jsx` stores mock categories, products, customers, and orders.
   - `ConfigContext.jsx` saves theme/config state in local storage.
 - `src/pages` — main views:
-  - `auth/Login.jsx` — login page with API sign-in, password visibility, and success/error handling.
-  - `dashboard/default.jsx` — dashboard landing page with stats, order table, and quick actions.
-  - `orders/index-new.jsx` — order processing and analytics page.
-  - `customers/index-new.jsx` — customer management view.
-  - `products/index-new.jsx` — product and menu management view.
-  - `reports/index-new.jsx` — reporting dashboard with charts and key metrics.
+  - `auth/Login.jsx` — Sign in page for RestaurantHub.
+  - `dashboard/default.jsx` — Restaurant dashboard overview and quick actions.
+  - `orders/index-new.jsx` — Orders workflow and analytics.
+  - `customers/index-new.jsx` — Customer management and history.
+  - `products/index-new.jsx` — Menu item and inventory management.
+  - `reports/index-new.jsx` — Sales and performance reports.
 - `src/components` — reusable UI pieces, including cards, loader, modal, sidebar, topbar, and scroll helper.
 - `src/themes` — theme configuration, palette, typography, and MUI component overrides.
 - `src/utils` — helper utilities and constants.
